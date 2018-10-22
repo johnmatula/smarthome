@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+			 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+		<g id="Layer_1">
+			<polyline fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" points="25,29 25,25 28,15 16,8 	"/>
+			<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="18" y1="29" x2="28" y2="29"/>
+			<path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M15,8"/>
+			<path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M13,10.5c0,0,4,0.5,4,6.5H5c0-6,4-6.5,4-6.5V7
+				c0-1.104,0.896-2,2-2s2,0.896,2,2V10.5z"/>
+			<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="11" y1="5" x2="11" y2="2"/>
+		</g>
+		</svg>
