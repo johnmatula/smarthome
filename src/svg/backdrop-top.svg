@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="240px" viewBox="0 0 320 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M205,165 C205,159.477153 200.522847,155 195,155 L170,155 C167.238576,155 165,152.761424 165,150 L165,90 C165,87.2385763 167.238576,85 170,85 L310,85 C312.761424,85 315,87.2385763 315,90 L315,150 C315,152.761424 312.761424,155 310,155 L285,155 C279.477153,155 275,159.477153 275,165 L275,230 C275,232.761424 272.761424,235 270,235 L210,235 C207.238576,235 205,232.761424 205,230 L205,165 Z" id="Combined-Shape" fill="#292B2A" fill-rule="nonzero" transform="translate(240.000000, 160.000000) rotate(-180.000000) translate(-240.000000, -160.000000) "></path>
+        <path d="M285,75 L285,10 C285,7.23857625 287.238576,5 290,5 L310,5 C312.761424,5 315,7.23857625 315,10 L315,85 L315,150 C315,152.761424 312.761424,155 310,155 L170,155 C167.238576,155 165,152.761424 165,150 L165,90 C165,87.2385763 167.238576,85 170,85 L275,85 C280.522847,85 285,80.5228475 285,75 Z" id="Combined-Shape" fill="#292B2A" fill-rule="nonzero" transform="translate(240.000000, 80.000000) rotate(-180.000000) translate(-240.000000, -80.000000) "></path>
+        <rect id="Rectangle-Copy-3" fill="#292B2A" fill-rule="nonzero" transform="translate(300.000000, 120.000000) rotate(-180.000000) translate(-300.000000, -120.000000) " x="285" y="85" width="30" height="70" rx="5"></rect>
+        <rect id="Rectangle-Copy-5" fill="#292B2A" fill-rule="nonzero" transform="translate(80.000000, 200.000000) rotate(-180.000000) translate(-80.000000, -200.000000) " x="5" y="165" width="150" height="70" rx="5"></rect>
+    </g>
+</svg>
