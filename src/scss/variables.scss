@@ -1,1 +1,43 @@
+$base-font-size: 16px;
+
+@function to-rem($size) {
+	$rem-size: $size / $base-font-size;
+	@return #{$rem-size}rem;
+}
+
+@function button-spot($index) {
+	@return to-rem($size-slot-value * $index * 1px + 5px);
+}
+
+@mixin typography($font-size, $line-height, $font-weight, $letter-spacing: 0px, $color: $color-body) {
+	color: $color;
+	font-size: to-rem($font-size);
+	font-weight: $font-weight;
+	line-height: to-rem($line-height);
+	letter-spacing: to-rem($letter-spacing);
+}
+
 $background-body: #000;
+$background-outlet-off: rgba(#292B2A, 0);
+$background-outlet-off-active: #79FEBC;
+$background-outlet-on: #494B4A;
+$background-outlet-on-active: #19653F;
+
+$color-emphasis: #DAE0DD;
+$color-body: #838785;
+$color-outlet-off: #DAE0DD;
+$color-outlet-off-active: #FFF;
+$color-outlet-on: #FAFFFC;
+$color-outlet-on-active: #DAE0DD;
+
+$padding-seamless: to-rem(5px);
+$padding-buttonpad-value: 5;
+$padding-buttonpad: to-rem($padding-buttonpad-value * 1px);
+$padding-textbox: to-rem(10px);
+$padding-sections: to-rem(16px);
+
+$size-button: to-rem(60px);
+$size-slot-value: 80;
+$size-slot: to-rem($size-slot-value * 1px);
+
+$timing-fadeaway: .75s;

@@ -1,0 +1,107 @@
+
+button {
+	align-items: center;
+	border-radius: 3px;
+	display: flex;
+	height: $size-button;
+	justify-content: center;
+	margin: $padding-buttonpad;
+	position: absolute;
+	transition: background-color $timing-fadeaway;
+	width: $size-button;
+
+	&::before {
+		background: transparent;
+		content: "";
+		display: block;
+		position: absolute;
+		left: -$padding-buttonpad;
+		right: -$padding-buttonpad;
+		top: -$padding-buttonpad;
+		bottom: -$padding-buttonpad;
+	}
+
+	svg {
+		display: inline-block;
+		margin: 0 auto;
+
+		* {
+			stroke: $color-outlet-off;
+			transition: stroke $timing-fadeaway;
+		}
+	}
+
+
+	&:active {
+		background: $background-outlet-off-active;
+		transition: background-color 0s;
+
+		svg * {
+			stroke: $color-outlet-off-active;
+			transition: stroke 0s;
+		}
+	}
+
+	&[data-status=on] {
+		background: $background-outlet-on;
+
+		svg * {
+			stroke: $color-outlet-on;
+			transition: stroke $timing-fadeaway;
+		}
+	}
+
+	&[data-status=on]:active {
+		background: $background-outlet-on-active;
+
+		svg * {
+			stroke: $color-outlet-on-active;
+			transition: stroke 0s;
+		}
+	}
+
+	&[data-outlets="bedroom_rice"] {
+		left: button-spot(3);
+		top: button-spot(0);
+	}
+
+	&[data-outlets="kitchen_cupboards"] {
+		left: button-spot(2.5);
+		top: button-spot(1);
+	}
+
+	&[data-outlets="hall_console"] {
+		left: button-spot(0);
+		top: button-spot(2);
+	}
+
+	&[data-outlets="hall_twinkle"] {
+		left: button-spot(1);
+		top: button-spot(2);
+	}
+
+	&[data-outlets="kitchen_pendant"] {
+		left: button-spot(2);
+		top: button-spot(2);
+	}
+
+	&[data-outlets="kitchen_table"] {
+		left: button-spot(3);
+		top: button-spot(2);
+	}
+
+	&[data-outlets="living_desk"] {
+		left: button-spot(2.5);
+		top: button-spot(3);
+	}
+
+	&[data-outlets="living_south"] {
+		left: button-spot(2);
+		top: button-spot(4);
+	}
+
+	&[data-outlets="living_north"] {
+		left: button-spot(3);
+		top: button-spot(4);
+	}
+}

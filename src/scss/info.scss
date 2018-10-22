@@ -1,0 +1,23 @@
+.clock {
+	align-items: flex-start;
+	height: to-rem(155px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: $padding-textbox;
+	width: to-rem(155px);
+
+	&__time {
+		@include typography(46px, 40px, 300, -.5px, $color-emphasis);
+	}
+
+	&__weekday {
+		@include typography(16px, 18px, 500, -.15px);
+
+		padding-top: $padding-sections;
+	}
+
+	&__date {
+		@include typography(20px, 24px, 400, -.2px);
+	}
+}
