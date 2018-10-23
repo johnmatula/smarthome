@@ -81,25 +81,26 @@ $rooms = array(
 
 $scenes = array(
 	"morning" => array(
+		"bedroom_rice",
+		"hall_console",
 		"kitchen_cupboards",
-		"closet_closet",
-		"bedroom_left",
-		"bedroom_right"
+		"kitchen_pendant",
+		"living_desk"
 	),
-	"cloudy" => array(
+	"rainy" => array(
 		"kitchen_cupboards",
-		"kitchen_window",
-		"study_desk"
+		"kitchen_pendant",
+		"living_desk",
+		"living_south"
 	),
 	"evening" => array(
+		"hall_twinkle",
 		"kitchen_cupboards",
-		"kitchen_window",
-		"living_rice",
-		"study_desk"
+		"kitchen_table"
 	),
 	"bedtime" => array(
-		"closet_closet",
-		"bedroom_left"
+		"kitchen_cupboards",
+		"bedroom_rice"
 	)
 );
 
