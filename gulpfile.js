@@ -10,7 +10,7 @@ var rename = require("gulp-rename");
 var log = require("fancy-log");
 var del = require("del");
 var fs = require("fs");
-var php = require('gulp-connect-php');
+var connect = require('gulp-connect-php');
 
 
 gulp.task('php', function(){
@@ -38,34 +38,20 @@ gulp.task("styles", function() {
 		.pipe(reload({stream:true}));
 });
 
-gulp.task("browser-sync", ["php"], function() {
-
-	// Check if a certificate exists in
-	// the expected spot. If not, pass "true"
-	// to Browsersync and have it generate
-	// a certificate (which the browser will
-	// probably flag as insecure).
-
-	var httpsConfig = true;
-
-	if (fs.existsSync("selfsigned.dev.key")) {
-		httpsConfig = {
-			key: "selfsigned.dev.key",
-			cert: "selfsigned.dev.crt"
-		};
-	}
-
-	browserSync({
-		server: {
-			baseDir: "./dist",
-			middleware: function (req, res, next) {
-				res.setHeader("Access-Control-Allow-Origin", "*");
-				next();
-			},
-		},
-		open: false,
-		https: httpsConfig
-	});
+gulp.task("browser-sync", function() {
+  connect.server({
+		port: 8080,
+		base: "./dist",
+		keepalive: true,
+		stdio: "ignore"
+	}, function (){
+		browserSync({
+			proxy: "localhost:8080",
+			start: "",
+			open: false,
+			https: true
+		});
+  });
 });
 
 gulp.task("html", function() {
