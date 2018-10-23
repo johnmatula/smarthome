@@ -20,15 +20,9 @@
 		</div>
 		<div class="info">
 			<div class="clock">
-				<p class="clock__time">
-
-				</p>
-				<p class="clock__weekday">
-
-				</p>
-				<p class="clock__date">
-
-				</p>
+				<p class="clock__time"></p>
+				<p class="clock__weekday"></p>
+				<p class="clock__date"></p>
 			</div>
 		</div>
 	</div>
@@ -39,7 +33,10 @@
 		</div>
 	</div>
 
-	<div class="region region--bottom">
+	<div class="region scenes region--bottom">
+		<div class="backdrop backdrop--bottom">
+			@@include("svg/backdrop-bottom.svg")
+		</div>
 	</div>
 
 	<div class="toggles">
@@ -52,6 +49,10 @@
 		<button class="toggles__button" data-outlets="living_desk" data-actiontype="toggle" data-status="">@@include("svg/living-desk.svg")</button>
 		<button class="toggles__button" data-outlets="living_south" data-actiontype="toggle" data-status="">@@include("svg/living-south.svg")</button>
 		<button class="toggles__button" data-outlets="living_north" data-actiontype="toggle" data-status="">@@include("svg/living-north.svg")</button>
+		<button class="toggles__button toggles__button--scene" data-outlets="morning" data-actiontype="sceneset">@@include("svg/scene-morning.svg")</button>
+		<button class="toggles__button toggles__button--scene" data-outlets="rainy" data-actiontype="sceneset">@@include("svg/scene-rainy.svg")</button>
+		<button class="toggles__button toggles__button--scene" data-outlets="bedtime" data-actiontype="sceneset">@@include("svg/scene-bedtime.svg")</button>
+		<button class="toggles__button toggles__button--scene" data-outlets="false" data-actiontype="global">@@include("svg/scene-power.svg")</button>
 	</div>
 
 
