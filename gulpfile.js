@@ -71,7 +71,7 @@ gulp.task("images", function() {
 });
 
 gulp.task("php", function() {
-	gulp.src(["./src/php/**/*.php"])
+	gulp.src(["./src/php/**/*"])
 		.pipe(gulp.dest("dist/php"))
 		.pipe(reload({stream:true}));
 });
