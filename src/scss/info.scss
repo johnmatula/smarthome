@@ -1,4 +1,4 @@
-.clock {
+.clock, .weather {
 	align-items: flex-start;
 	height: to-rem(155px);
 	display: flex;
@@ -19,5 +19,32 @@
 
 	&__date {
 		@include typography(20px, 24px, 400, -.2px);
+	}
+
+
+	&__temp {
+		@include typography(32px, 32px, 400, -.5px, $color-emphasis);
+	}
+
+	&__feels {
+		@include typography(20px, 24px, 400, -.2px, $color-emphasis);
+
+		&:empty {
+			display: none;
+		}
+	}
+
+	&__wind {
+		@include typography(16px, 18px, 500, -.15px);
+
+		padding-top: $padding-sections;
+	}
+
+	&__windunit {
+		@include typography(12px, 18px, 700, -.075px);
+	}
+
+	&__humidity {
+		@include typography(16px, 18px, 500, -.15px);
 	}
 }
