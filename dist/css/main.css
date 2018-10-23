@@ -155,7 +155,7 @@ body * {
   letter-spacing: -0.0125rem;
 }
 
-button {
+.toggles__button {
   -webkit-align-items: center;
           align-items: center;
   border-radius: 3px;
@@ -169,7 +169,7 @@ button {
   transition: background-color 0.75s;
   width: 3.75rem;
 }
-button::before {
+.toggles__button::before {
   background: transparent;
   content: "";
   display: block;
@@ -179,69 +179,88 @@ button::before {
   top: -0.3125rem;
   bottom: -0.3125rem;
 }
-button svg {
+.toggles__button svg {
   display: inline-block;
   margin: 0 auto;
 }
-button svg * {
+.toggles__button svg * {
   stroke: #DAE0DD;
   transition: stroke 0.75s;
 }
-button:active {
+.toggles__button--scene svg * {
+  stroke: #838785;
+}
+.toggles__button:active {
   background: #79FEBC;
   transition: background-color 0s;
 }
-button:active svg * {
+.toggles__button:active svg * {
   stroke: #FFF;
   transition: stroke 0s;
 }
-button[data-status=on] {
+.toggles__button[data-status=on] {
   background: #494B4A;
 }
-button[data-status=on] svg * {
+.toggles__button[data-status=on] svg * {
   stroke: #FAFFFC;
   transition: stroke 0.75s;
 }
-button[data-status=on]:active {
+.toggles__button[data-status=on]:active {
   background: #19653F;
 }
-button[data-status=on]:active svg * {
+.toggles__button[data-status=on]:active svg * {
   stroke: #DAE0DD;
   transition: stroke 0s;
 }
-button[data-outlets="bedroom_rice"] {
+.toggles__button[data-outlets="bedroom_rice"] {
   left: 15.3125rem;
   top: 0.3125rem;
 }
-button[data-outlets="kitchen_cupboards"] {
+.toggles__button[data-outlets="kitchen_cupboards"] {
   left: 12.8125rem;
   top: 5.3125rem;
 }
-button[data-outlets="hall_console"] {
+.toggles__button[data-outlets="hall_console"] {
   left: 0.3125rem;
   top: 10.3125rem;
 }
-button[data-outlets="hall_twinkle"] {
+.toggles__button[data-outlets="hall_twinkle"] {
   left: 5.3125rem;
   top: 10.3125rem;
 }
-button[data-outlets="kitchen_pendant"] {
+.toggles__button[data-outlets="kitchen_pendant"] {
   left: 10.3125rem;
   top: 10.3125rem;
 }
-button[data-outlets="kitchen_table"] {
+.toggles__button[data-outlets="kitchen_table"] {
   left: 15.3125rem;
   top: 10.3125rem;
 }
-button[data-outlets="living_desk"] {
+.toggles__button[data-outlets="living_desk"] {
   left: 12.8125rem;
   top: 15.3125rem;
 }
-button[data-outlets="living_south"] {
+.toggles__button[data-outlets="living_south"] {
   left: 10.3125rem;
   top: 20.3125rem;
 }
-button[data-outlets="living_north"] {
+.toggles__button[data-outlets="living_north"] {
   left: 15.3125rem;
   top: 20.3125rem;
+}
+.toggles__button[data-outlets="morning"] {
+  left: 0.3125rem;
+  top: 25.3125rem;
+}
+.toggles__button[data-outlets="rainy"] {
+  left: 5.3125rem;
+  top: 25.3125rem;
+}
+.toggles__button[data-outlets="bedtime"] {
+  left: 10.3125rem;
+  top: 25.3125rem;
+}
+.toggles__button[data-outlets="false"] {
+  left: 15.3125rem;
+  top: 25.3125rem;
 }

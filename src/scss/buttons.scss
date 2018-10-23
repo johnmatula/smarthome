@@ -1,5 +1,4 @@
-
-button {
+.toggles__button {
 	align-items: center;
 	border-radius: 3px;
 	display: flex;
@@ -28,6 +27,12 @@ button {
 		* {
 			stroke: $color-outlet-off;
 			transition: stroke $timing-fadeaway;
+		}
+	}
+
+	&--scene {
+		svg * {
+			stroke: $color-body;
 		}
 	}
 
@@ -103,5 +108,25 @@ button {
 	&[data-outlets="living_north"] {
 		left: button-spot(3);
 		top: button-spot(4);
+	}
+
+	&[data-outlets="morning"] {
+		left: button-spot(0);
+		top: button-spot(5);
+	}
+
+	&[data-outlets="rainy"] {
+		left: button-spot(1);
+		top: button-spot(5);
+	}
+
+	&[data-outlets="bedtime"] {
+		left: button-spot(2);
+		top: button-spot(5);
+	}
+
+	&[data-outlets="false"] {
+		left: button-spot(3);
+		top: button-spot(5);
 	}
 }
