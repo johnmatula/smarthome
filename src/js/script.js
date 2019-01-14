@@ -45,11 +45,11 @@ var queryOutletStatus = function() {
 
 var updateUI = function(data) {
 	Object.keys(data.outlets).forEach(function (outlet) {
-		$("button[data-outlets=" + outlet + "]").attr("data-status", (data.outlets[outlet] ? "on" : "off"));
+		$("button[data-outlets*=" + outlet + "]").attr("data-status", (data.outlets[outlet] ? "on" : "off"));
 	});
 
 	Object.keys(data.rooms).forEach(function (outlet) {
-		$(".room[data-outlets=" + outlet + "]").attr("data-status", (data.rooms[outlet] ? "on" : "off"));
+		$(".room[data-outlets*=" + outlet + "]").attr("data-status", (data.rooms[outlet] ? "on" : "off"));
 	});
 };
 
