@@ -251,12 +251,20 @@ body * {
   stroke: #DAE0DD;
   transition: stroke 0s;
 }
+.toggles__button[data-outlets="bedroom_salt"] {
+  left: 10.3125rem;
+  top: 0.3125rem;
+}
 .toggles__button[data-outlets="bedroom_rice"] {
   left: 15.3125rem;
   top: 0.3125rem;
 }
 .toggles__button[data-outlets="kitchen_cupboards"] {
-  left: 12.8125rem;
+  left: 10.3125rem;
+  top: 5.3125rem;
+}
+.toggles__button[data-outlets="kitchen_abovecupboards"] {
+  left: 15.3125rem;
   top: 5.3125rem;
 }
 .toggles__button[data-outlets="hall_console"] {
@@ -276,7 +284,11 @@ body * {
   top: 10.3125rem;
 }
 .toggles__button[data-outlets="living_desk"] {
-  left: 12.8125rem;
+  left: 10.3125rem;
+  top: 15.3125rem;
+}
+.toggles__button[data-outlets="living_windowwest,living_windoweast"] {
+  left: 15.3125rem;
   top: 15.3125rem;
 }
 .toggles__button[data-outlets="living_south"] {
