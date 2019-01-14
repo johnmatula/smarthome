@@ -37,11 +37,29 @@ $codes = array(
 		"off" => 1398220,
 		"pulse" => 183
 	),
+	"living_windoweast" => array(
+		"id" => "0307.2",
+		"on" => 87491,
+		"off" => 87500,
+		"pulse" => 174
+	),
+	"living_windowwest" => array(
+		"id" => "0307.1",
+		"on" => 87347,
+		"off" => 87356,
+		"pulse" => 174
+	),
 	"bedroom_rice" => array(
 		"id" => "0301.3",
 		"on" => 1398531,
 		"off" => 1398540,
 		"pulse" => 183
+	),
+	"bedroom_salt" => array(
+		"id" => "0307.5",
+		"on" => 95491,
+		"off" => 95500,
+		"pulse" => 174
 	),
 	"kitchen_table" => array(
 		"id" => "0301.4",
@@ -55,6 +73,12 @@ $codes = array(
 		"off" => 1406220,
 		"pulse" => 183
 	),
+	"kitchen_abovecupboards" => array(
+		"id" => "0307.3",
+		"on" => 87811,
+		"off" => 87820,
+		"pulse" => 174
+	),
 );
 
 
@@ -67,6 +91,7 @@ $rooms = array(
 		"hall_twinkle"
 	),
 	"kitchen" => array(
+		"kitchen_abovecupboards",
 		"kitchen_cupboards",
 		"kitchen_pendant",
 		"kitchen_table"
@@ -74,7 +99,9 @@ $rooms = array(
 	"living" => array(
 		"living_north",
 		"living_south",
-		"living_desk"
+		"living_desk",
+		"living_windoweast",
+		"living_windowwest"
 	)
 );
 
@@ -91,16 +118,25 @@ $scenes = array(
 		"kitchen_cupboards",
 		"kitchen_pendant",
 		"living_desk",
-		"living_south"
+		"living_south",
+		"living_windoweast",
+		"living_windowwest"
 	),
 	"evening" => array(
 		"hall_twinkle",
 		"kitchen_cupboards",
-		"kitchen_table"
+		"kitchen_abovecupboards",
+		"living_desk",
+		"living_windoweast",
+		"living_windowwest",
+		"bedroom_salt"
 	),
 	"bedtime" => array(
-		"kitchen_cupboards",
-		"bedroom_rice"
+		"kitchen_abovecupboards",
+		"bedroom_rice",
+		"bedroom_salt",
+		"living_windoweast",
+		"living_windowwest"
 	)
 );
 
@@ -113,14 +149,3 @@ $global_pulse = "189";
 if (!file_exists($executable)) {
 	error_log("$executable is missing; please edit the script.", 0);
 }
-
-
-/*
-ON	OFF	Pulse
-1	1398067	1398076	183
-2	1398211	1398220	183
-3	1398531	1398540	183
-4	1400067	1400076	183
-5	1406211	1406220	183
-
-*/
