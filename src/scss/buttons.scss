@@ -64,6 +64,11 @@
 			transition: stroke 0s;
 		}
 	}
+	
+	&[data-outlets="bedroom_salt"] {
+		left: button-spot(2);
+		top: button-spot(0);
+	}
 
 	&[data-outlets="bedroom_rice"] {
 		left: button-spot(3);
@@ -71,7 +76,12 @@
 	}
 
 	&[data-outlets="kitchen_cupboards"] {
-		left: button-spot(2.5);
+		left: button-spot(2);
+		top: button-spot(1);
+	}
+	
+	&[data-outlets="kitchen_abovecupboards"] {
+		left: button-spot(3);
 		top: button-spot(1);
 	}
 
@@ -96,7 +106,12 @@
 	}
 
 	&[data-outlets="living_desk"] {
-		left: button-spot(2.5);
+		left: button-spot(2);
+		top: button-spot(3);
+	}
+	
+	&[data-outlets="living_windowwest,living_windoweast"] {
+		left: button-spot(3);
 		top: button-spot(3);
 	}
 
