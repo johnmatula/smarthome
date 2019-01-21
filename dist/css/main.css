@@ -120,8 +120,8 @@ body * {
 }
 
 .clock, .weather {
-  -webkit-align-items: flex-start;
-          align-items: flex-start;
+  -webkit-align-items: stretch;
+          align-items: stretch;
   height: 9.6875rem;
   display: -webkit-flex;
   display: flex;
