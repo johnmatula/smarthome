@@ -62,11 +62,15 @@ if(isset($_GET["action"]) && $_GET["action"] != "reset") {
 		}
 
 		foreach($scene_outlets as $outlet) {
+			if($state->outlets->outlet === true) continue;
+			
 			$state->outlets->$outlet = true;
 			send_outlet_command($outlet, true, $codes, $executable, $gpio_pin);
 		}
 
 		foreach($outlets_to_turn_off as $outlet) {
+			if($state->outlets->outlet === false) continue;
+			
 			$state->outlets->$outlet = false;
 			send_outlet_command($outlet, false, $codes, $executable, $gpio_pin);
 		}
