@@ -70,7 +70,7 @@ var updateWeather = function() {
 			$(".weather__humidity").text("Humidity " + Math.round(data.main.humidity) + "%");
 
 			var feels = calculateFeels(data.main.temp, data.main.humidity, data.wind.speed);
-			if(feels) {
+			if(feels !== false) {
 				$(".weather__feels").text("Feels like " + Math.round(feels) + "°")
 			} else {
 				$(".weather__feels").text("");
