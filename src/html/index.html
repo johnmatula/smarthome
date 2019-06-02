@@ -67,11 +67,38 @@
 		<button class="toggles__button toggles__button--scene" data-outlets="false" data-actiontype="global">@@include("svg/scene-power.svg")</button>
 	</div>
 
+  <div class="settings">
+    <div class="headerbar">
+      <h2 class="headerbar__header">Settings</h2>
+      <button class="headerbar__close">Done</button>
+    </div>
+    <div class="row">
+      <h3 class="row__header">Theme</h3>
+      <ul class="row__choicelist">
+        <li class="row__choice">
+          <button class="row__choicebutton" data-settings="theme" data-theme="dark">Dark</button>
+        </li>
+        <li class="row__choice">
+          <button class="row__choicebutton" data-settings="theme" data-theme="daylight">Daylight</button>
+        </li>
+        <li class="row__choice">
+          <button class="row__choicebutton" data-settings="theme" data-theme="pride">Pride</button>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <h3 class="row__header">System</h3>
+      <div class="row__rowbuttons">
+        <button class="row__rowbutton" data-settings="reload">Reload Smarthome</button>
+        <button class="row__rowbutton" data-settings="reset">Reload and Clear Settings</button>
+      </div>
+  </div>
 
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/vendor/jquery.longpress.min.js"></script>
 	<script src="js/vendor/fastclick.min.js"></script>
 	<script src="js/vendor/moment.min.js"></script>
+	<script src="js/vendor/css-vars-ponyfill.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
 </html>
