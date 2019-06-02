@@ -132,6 +132,79 @@ function calculateWindChill(T, V){
 	return Math.round(35.74 + (0.6215*T) - (35.75*Math.pow(V,0.16)) + (0.4275*T*Math.pow(V,0.16)));
 }
 
+function setTheme(theme) {
+  theme = theme || localStorage.getItem('smarthomeTheme') || "dark";
+  
+  console.log(theme);
+  
+  $(".js--selected").removeClass("js--selected");
+  $("button[data-theme=" + theme + "]").parent().addClass("js--selected");
+  
+  if(theme == "dark") {
+    cssVars({
+      variables: {
+        "--background-body": "#000",
+        "--background-settings": "rgba(15,15,15,.975)",
+        "--background-backdrop": "#292B2A",
+        "--background-outlet-off": "#292B2A00",
+        "--background-outlet-off-active": "#79FEBC",
+        "--background-outlet-on": "#494B4A",
+        "--background-outlet-on-active": "#19653F",
+        "--color-emphasis": "#DAE0DD",
+        "--color-body": "#838785",
+        "--color-outlet-off": "#DAE0DD",
+        "--color-outlet-off-active": "#FFF",
+        "--color-outlet-on": "#FAFFFC",
+        "--color-outlet-on-active": "#DAE0DD",
+        "--color-scene": "#838785",
+        "--backdrop-animation": "none"
+      }
+    });
+  } else if(theme == "daylight") {
+    cssVars({
+      variables: {
+        "--background-body": "#fefefe",
+        "--background-settings": "rgba(250,250,250,.975)",
+        "--background-backdrop": "#f4f4f4",
+        "--background-outlet-off": "#f4f4f400",
+        "--background-outlet-off-active": "#79FEBC",
+        "--background-outlet-on": "#79FEBC",
+        "--background-outlet-on-active": "#19653F",
+        "--color-emphasis": "#111",
+        "--color-body": "#777",
+        "--color-outlet-off": "#777",
+        "--color-outlet-off-active": "#000",
+        "--color-outlet-on": "#000",
+        "--color-outlet-on-active": "#000",
+        "--color-scene": "#777",
+        "--backdrop-animation": "none"
+      }
+    });
+  } else if(theme == "pride") {
+    cssVars({
+      variables: {
+        "--background-body": "#000",
+        "--background-settings": "rgba(15,15,15,.975)",
+        "--background-backdrop": "#292929",
+        "--background-outlet-off": "rgba(0, 0, 0, 0)",
+        "--background-outlet-off-active": "rgba(255, 255, 255, 0.5)",
+        "--background-outlet-on": "rgba(255, 255, 255, 0.2)",
+        "--background-outlet-on-active": "rgba(#fff, 0.3)",
+        "--color-emphasis": "rgba(255, 255, 255, .875)",
+        "--color-body": "#858585",
+        "--color-outlet-off": "rgba(255, 255, 255, .875)",
+        "--color-outlet-off-active": "#fff",
+        "--color-outlet-on": "rgba(255, 255, 255, .975)",
+        "--color-outlet-on-active": "#fff",
+        "--color-scene": "#838785",
+        "--backdrop-animation": "pride-colors 120s linear infinite"
+      }
+    });
+  }
+  
+  localStorage.setItem("smarthomeTheme", theme);
+}
+
 // Document is ready, do this stuff.
 $(function() {
 	// Set up button clicks and long-press events.
@@ -145,15 +218,23 @@ $(function() {
 		500
 	);
 
-	// Debug refresh hold.
-	$('.clock__weekday').longpress(
-		function() {
-			window.location.reload();
-		},
-		function() {
-		},
-		100
-	);
+	// Settings.
+	$('button[data-settings]').click(function(e) {
+    $button = $(e.target);
+    
+    if($button.attr('data-settings') == 'reload') {
+      window.location.reload();
+    } else if($button.attr('data-settings') == 'reset') {
+      localStorage.clear();
+      window.location.reload();
+    } else if($button.attr('data-settings') == 'theme') {
+      setTheme($button.attr('data-theme'));
+    }
+	});
+  
+  $(".clock, .headerbar__close").click(function() {
+    $(".settings").toggleClass("js--visible");
+  });
 
 	// Enable FastClick.
 	FastClick.attach(document.body);
@@ -166,7 +247,18 @@ $(function() {
 
 	updateWeatherFirstTime();
 	var intervalWeather = setInterval(updateWeather, (5 * 60 * 1000));
+  
+  setTheme()
+  
+  cssVars({
+    // Treat all browsers as legacy
+    watch: true
+  });
 });
+
+
+// Enables CSS custom properties for iOS 6+.
+
 
 // Handles quick button taps by queueing them.
 (function(a){var b=a({});a.ajaxQueue=function(c){function g(b){d=a.ajax(c).done(e.resolve).fail(e.reject).then(b,b)}var d,e=a.Deferred(),f=e.promise();b.queue(g),f.abort=function(h){if(d)return d.abort(h);var i=b.queue(),j=a.inArray(g,i);j>-1&&i.splice(j,1),e.rejectWith(c.context||c,[f,h,""]);return f};return f}})(jQuery)
