@@ -1,4 +1,22 @@
 .backdrop {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  g {
+    animation: var(--backdrop-animation);
+
+    -webkit-animation: var(--backdrop-animation);
+    fill: var(--background-backdrop);
+    stroke: var(--background-backdrop);
+    transition: none;
+  }
+}
+
+/*.backdrop {
 	bottom: 0;
 	left: 0;
 	pointer-events: none;
@@ -14,11 +32,16 @@
       animation: pride-colors 60s linear infinite;
     }
   }
-}
+}*/
 
 
-@keyframes pride-colors {
+@-webkit-keyframes pride-colors {
   0% {
+    fill: rgba(#EA3733, .95);
+    stroke: rgba(#EA3733, .95);
+  }
+  
+  11.5% {
     fill: rgba(#EA3733, .95);
     stroke: rgba(#EA3733, .95);
   }
@@ -28,7 +51,17 @@
     stroke: rgba(#F4893B, .95);
   }
   
+  24% {
+    fill: rgba(#F4893B, .95);
+    stroke: rgba(#F4893B, .95);
+  }
+  
   25% {
+    fill: rgba(#FBB731, .95);
+    stroke: rgba(#FBB731, .95);
+  }
+  
+  36.5% {
     fill: rgba(#FBB731, .95);
     stroke: rgba(#FBB731, .95);
   }
@@ -38,7 +71,17 @@
     stroke: rgba(#A6CC4D, .95);
   }
   
+  49% {
+    fill: rgba(#A6CC4D, .95);
+    stroke: rgba(#A6CC4D, .95);
+  }
+  
   50% {
+    fill: rgba(#18A555, .95);
+    stroke: rgba(#18A555, .95);
+  }
+  
+  61.5% {
     fill: rgba(#18A555, .95);
     stroke: rgba(#18A555, .95);
   }
@@ -48,12 +91,27 @@
     stroke: rgba(#20BCF0, .95);
   }
   
+  74% {
+    fill: rgba(#20BCF0, .95);
+    stroke: rgba(#20BCF0, .95);
+  }
+  
   75% {
     fill: rgba(#A93A93, .95);
     stroke: rgba(#A93A93, .95);
   }
   
+  86.5% {
+    fill: rgba(#A93A93, .95);
+    stroke: rgba(#A93A93, .95);
+  }
+  
   87.5% {
+    fill: rgba(#EA3178, .95);
+    stroke: rgba(#EA3178, .95);
+  }
+  
+  99% {
     fill: rgba(#EA3178, .95);
     stroke: rgba(#EA3178, .95);
   }

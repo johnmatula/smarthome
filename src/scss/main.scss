@@ -4,12 +4,13 @@
 body {
 	@include typography(16px, 20px, 400, -.25px);
 
-	background: $background-body;
+	background: var(--background-body);
 }
 
-body * {
+* {
 	cursor: default;
 	user-select: none;
+  transition: all .2s;
 }
 
 .region {
@@ -30,6 +31,11 @@ body * {
 
 }
 
+svg {
+  display: block;
+}
+
 @import "info";
 @import "buttons";
 @import "backdrop";
+@import "settings";

@@ -4,11 +4,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+  opacity: 1;
 	padding: $padding-textbox;
+  transition: opacity .2s, color .2s, background .2s;
 	width: to-rem(155px);
 
 	&__time {
-		@include typography(46px, 40px, 300, -.5px, $color-emphasis);
+		@include typography(46px, 40px, 300, -.5px, var(--color-emphasis));
 	}
 
 	&__weekday {
@@ -23,11 +25,11 @@
 
 
 	&__temp {
-		@include typography(32px, 32px, 400, -.5px, $color-emphasis);
+		@include typography(32px, 32px, 400, -.5px, var(--color-emphasis));
 	}
 
 	&__feels {
-		@include typography(20px, 24px, 400, -.2px, $color-emphasis);
+		@include typography(20px, 24px, 400, -.2px, var(--color-emphasis));
 
 		&:empty {
 			display: none;
@@ -47,4 +49,11 @@
 	&__humidity {
 		@include typography(16px, 18px, 500, -.15px);
 	}
+}
+
+.clock {
+  &:active {
+    opacity: .75;
+    transition: opacity 0s, color 0s, background 0s;
+  }
 }

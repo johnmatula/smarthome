@@ -25,42 +25,42 @@
 		margin: 0 auto;
 
 		* {
-			stroke: $color-outlet-off;
+			stroke: var(--color-outlet-off);
 			transition: stroke $timing-fadeaway;
 		}
 	}
 
 	&--scene {
 		svg * {
-			stroke: $color-body;
+			stroke: var(--color-body);
 		}
 	}
 
 
 	&:active {
-		background: $background-outlet-off-active;
+		background: var(--background-outlet-off-active);
 		transition: background-color 0s;
 
 		svg * {
-			stroke: $color-outlet-off-active;
+			stroke: var(--color-outlet-off-active);
 			transition: stroke 0s;
 		}
 	}
 
 	&[data-status=on] {
-		background: $background-outlet-on;
+		background: var(--background-outlet-on);
 
 		svg * {
-			stroke: $color-outlet-on;
+			stroke: var(--color-outlet-on);
 			transition: stroke $timing-fadeaway;
 		}
 	}
 
 	&[data-status=on]:active {
-		background: $background-outlet-on-active;
+		background: var(--background-outlet-on-active);
 
 		svg * {
-			stroke: $color-outlet-on-active;
+			stroke: var(--color-outlet-on-active);
 			transition: stroke 0s;
 		}
 	}
