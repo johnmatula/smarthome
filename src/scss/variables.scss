@@ -16,7 +16,7 @@ $base-font-size: 16px;
 	line-height: to-rem($line-height);
 	letter-spacing: to-rem($letter-spacing);
 }
-
+/* Green-ish values paused for pride
 $background-body: #000;
 $background-outlet-off: rgba(#292B2A, 0);
 $background-outlet-off-active: #79FEBC;
@@ -29,6 +29,20 @@ $color-outlet-off: #DAE0DD;
 $color-outlet-off-active: #FFF;
 $color-outlet-on: #FAFFFC;
 $color-outlet-on-active: #DAE0DD;
+*/
+
+$background-body: #000;
+$background-outlet-off: rgba(#292929, 0);
+$background-outlet-off-active: rgba(#fff, 0.5);
+$background-outlet-on: rgba(#fff, 0.2);
+$background-outlet-on-active: rgba(#fff, 0.3);
+
+$color-emphasis: rgba(#fff, .875);
+$color-body: #858585;
+$color-outlet-off: rgba(#fff, .875);
+$color-outlet-off-active: #fff;
+$color-outlet-on: rgba(#fff, .975);
+$color-outlet-on-active: #fff;
 
 $padding-seamless: to-rem(5px);
 $padding-buttonpad-value: 5;

@@ -1,0 +1,65 @@
+.backdrop {
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+  
+  g {
+    fill: #292B2A;
+    stroke: #292B2A;
+    
+    .theme--pride & {
+      animation: pride-colors 60s linear infinite;
+    }
+  }
+}
+
+
+@keyframes pride-colors {
+  0% {
+    fill: rgba(#EA3733, .95);
+    stroke: rgba(#EA3733, .95);
+  }
+  
+  12.5% {
+    fill: rgba(#F4893B, .95);
+    stroke: rgba(#F4893B, .95);
+  }
+  
+  25% {
+    fill: rgba(#FBB731, .95);
+    stroke: rgba(#FBB731, .95);
+  }
+  
+  37.5% {
+    fill: rgba(#A6CC4D, .95);
+    stroke: rgba(#A6CC4D, .95);
+  }
+  
+  50% {
+    fill: rgba(#18A555, .95);
+    stroke: rgba(#18A555, .95);
+  }
+  
+  62.5% {
+    fill: rgba(#20BCF0, .95);
+    stroke: rgba(#20BCF0, .95);
+  }
+  
+  75% {
+    fill: rgba(#A93A93, .95);
+    stroke: rgba(#A93A93, .95);
+  }
+  
+  87.5% {
+    fill: rgba(#EA3178, .95);
+    stroke: rgba(#EA3178, .95);
+  }
+  
+  100% {
+    fill: rgba(#EA3733, .95);
+    stroke: rgba(#EA3733, .95);
+  }
+}

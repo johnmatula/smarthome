@@ -79,8 +79,22 @@ table {
   border-spacing: 0;
 }
 
+/* Green-ish values paused for pride
+$background-body: #000;
+$background-outlet-off: rgba(#292B2A, 0);
+$background-outlet-off-active: #79FEBC;
+$background-outlet-on: #494B4A;
+$background-outlet-on-active: #19653F;
+
+$color-emphasis: #DAE0DD;
+$color-body: #838785;
+$color-outlet-off: #DAE0DD;
+$color-outlet-off-active: #FFF;
+$color-outlet-on: #FAFFFC;
+$color-outlet-on-active: #DAE0DD;
+*/
 body {
-  color: #838785;
+  color: #858585;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -110,15 +124,6 @@ body * {
   height: 5rem;
 }
 
-.backdrop {
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .clock, .weather {
   -webkit-align-items: stretch;
           align-items: stretch;
@@ -133,14 +138,14 @@ body * {
   width: 9.6875rem;
 }
 .clock__time, .weather__time {
-  color: #DAE0DD;
+  color: rgba(255, 255, 255, 0.875);
   font-size: 2.875rem;
   font-weight: 300;
   line-height: 2.5rem;
   letter-spacing: -0.03125rem;
 }
 .clock__weekday, .weather__weekday {
-  color: #838785;
+  color: #858585;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.125rem;
@@ -148,21 +153,21 @@ body * {
   padding-top: 1rem;
 }
 .clock__date, .weather__date {
-  color: #838785;
+  color: #858585;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5rem;
   letter-spacing: -0.0125rem;
 }
 .clock__temp, .weather__temp {
-  color: #DAE0DD;
+  color: rgba(255, 255, 255, 0.875);
   font-size: 2rem;
   font-weight: 400;
   line-height: 2rem;
   letter-spacing: -0.03125rem;
 }
 .clock__feels, .weather__feels {
-  color: #DAE0DD;
+  color: rgba(255, 255, 255, 0.875);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -172,7 +177,7 @@ body * {
   display: none;
 }
 .clock__wind, .weather__wind {
-  color: #838785;
+  color: #858585;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.125rem;
@@ -180,14 +185,14 @@ body * {
   padding-top: 1rem;
 }
 .clock__windunit, .weather__windunit {
-  color: #838785;
+  color: #858585;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.125rem;
   letter-spacing: -0.00469rem;
 }
 .clock__humidity, .weather__humidity {
-  color: #838785;
+  color: #858585;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.125rem;
@@ -223,32 +228,32 @@ body * {
   margin: 0 auto;
 }
 .toggles__button svg * {
-  stroke: #DAE0DD;
+  stroke: rgba(255, 255, 255, 0.875);
   transition: stroke 0.75s;
 }
 .toggles__button--scene svg * {
-  stroke: #838785;
+  stroke: #858585;
 }
 .toggles__button:active {
-  background: #79FEBC;
+  background: rgba(255, 255, 255, 0.5);
   transition: background-color 0s;
 }
 .toggles__button:active svg * {
-  stroke: #FFF;
+  stroke: #fff;
   transition: stroke 0s;
 }
 .toggles__button[data-status=on] {
-  background: #494B4A;
+  background: rgba(255, 255, 255, 0.2);
 }
 .toggles__button[data-status=on] svg * {
-  stroke: #FAFFFC;
+  stroke: rgba(255, 255, 255, 0.975);
   transition: stroke 0.75s;
 }
 .toggles__button[data-status=on]:active {
-  background: #19653F;
+  background: rgba(255, 255, 255, 0.3);
 }
 .toggles__button[data-status=on]:active svg * {
-  stroke: #DAE0DD;
+  stroke: #fff;
   transition: stroke 0s;
 }
 .toggles__button[data-outlets="bedroom_salt"] {
@@ -314,4 +319,99 @@ body * {
 .toggles__button[data-outlets="false"] {
   left: 15.3125rem;
   top: 25.3125rem;
+}
+
+.backdrop {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.backdrop g {
+  fill: #292B2A;
+  stroke: #292B2A;
+}
+.theme--pride .backdrop g {
+  -webkit-animation: pride-colors 60s linear infinite;
+          animation: pride-colors 60s linear infinite;
+}
+
+@-webkit-keyframes pride-colors {
+  0% {
+    fill: rgba(234, 55, 51, 0.95);
+    stroke: rgba(234, 55, 51, 0.95);
+  }
+  12.5% {
+    fill: rgba(244, 137, 59, 0.95);
+    stroke: rgba(244, 137, 59, 0.95);
+  }
+  25% {
+    fill: rgba(251, 183, 49, 0.95);
+    stroke: rgba(251, 183, 49, 0.95);
+  }
+  37.5% {
+    fill: rgba(166, 204, 77, 0.95);
+    stroke: rgba(166, 204, 77, 0.95);
+  }
+  50% {
+    fill: rgba(24, 165, 85, 0.95);
+    stroke: rgba(24, 165, 85, 0.95);
+  }
+  62.5% {
+    fill: rgba(32, 188, 240, 0.95);
+    stroke: rgba(32, 188, 240, 0.95);
+  }
+  75% {
+    fill: rgba(169, 58, 147, 0.95);
+    stroke: rgba(169, 58, 147, 0.95);
+  }
+  87.5% {
+    fill: rgba(234, 49, 120, 0.95);
+    stroke: rgba(234, 49, 120, 0.95);
+  }
+  100% {
+    fill: rgba(234, 55, 51, 0.95);
+    stroke: rgba(234, 55, 51, 0.95);
+  }
+}
+
+@keyframes pride-colors {
+  0% {
+    fill: rgba(234, 55, 51, 0.95);
+    stroke: rgba(234, 55, 51, 0.95);
+  }
+  12.5% {
+    fill: rgba(244, 137, 59, 0.95);
+    stroke: rgba(244, 137, 59, 0.95);
+  }
+  25% {
+    fill: rgba(251, 183, 49, 0.95);
+    stroke: rgba(251, 183, 49, 0.95);
+  }
+  37.5% {
+    fill: rgba(166, 204, 77, 0.95);
+    stroke: rgba(166, 204, 77, 0.95);
+  }
+  50% {
+    fill: rgba(24, 165, 85, 0.95);
+    stroke: rgba(24, 165, 85, 0.95);
+  }
+  62.5% {
+    fill: rgba(32, 188, 240, 0.95);
+    stroke: rgba(32, 188, 240, 0.95);
+  }
+  75% {
+    fill: rgba(169, 58, 147, 0.95);
+    stroke: rgba(169, 58, 147, 0.95);
+  }
+  87.5% {
+    fill: rgba(234, 49, 120, 0.95);
+    stroke: rgba(234, 49, 120, 0.95);
+  }
+  100% {
+    fill: rgba(234, 55, 51, 0.95);
+    stroke: rgba(234, 55, 51, 0.95);
+  }
 }
