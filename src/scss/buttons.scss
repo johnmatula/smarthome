@@ -26,18 +26,14 @@
 
 		> * {
 			stroke: var(--color-outlet-off);
-			//transition: stroke $timing-fadeaway;
+			transition: stroke $timing-fadeaway;
 		}
     
     &.svg--pride {
       stroke: #666;
       
       &--color0 {
-        stroke: #f196a9;
-      }
-      
-      &--color1 {
-        stroke: #EA3733;
+        stroke: #ff99ae;
       }
       
       &--color1 {
@@ -106,7 +102,6 @@
 
 		svg * {
 			stroke: var(--color-outlet-on);
-			//transition: stroke $timing-fadeaway;
 		}
     
     svg.svg--pride * {
@@ -119,7 +114,7 @@
 
 		svg * {
 			stroke: var(--color-outlet-on-active);
-			//transition: stroke 0s;
+			transition: stroke 0s;
 		}
     
     svg.svg--pride * {
