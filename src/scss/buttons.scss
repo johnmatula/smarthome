@@ -24,11 +24,61 @@
 		display: inline-block;
 		margin: 0 auto;
 
-		* {
+		> * {
 			stroke: var(--color-outlet-off);
-			transition: stroke $timing-fadeaway;
+			//transition: stroke $timing-fadeaway;
 		}
+    
+    &.svg--pride {
+      stroke: #666;
+      
+      &--color0 {
+        stroke: #f196a9;
+      }
+      
+      &--color1 {
+        stroke: #EA3733;
+      }
+      
+      &--color1 {
+        stroke: #EA3733;
+      }
+      
+      &--color2 {
+        stroke: #F4893B;
+      }
+      
+      &--color3 {
+        stroke: #FBB731;
+      }
+      
+      &--color4 {
+        stroke: #A6CC4D;
+      }
+      
+      &--color5 {
+        stroke: #18A555;
+      }
+      
+      &--color6 {
+        stroke: #20BCF0;
+      }
+      
+      &--color7 {
+        stroke: #A93A93;
+      }
+      
+      &--color8 {
+        stroke: #EA3178;
+      }
+    }
 	}
+  
+  svg.svg--pride {
+		* {
+			stroke: inherit;
+		}
+  }
 
 	&--scene {
 		svg * {
@@ -45,6 +95,10 @@
 			stroke: var(--color-outlet-off-active);
 			transition: stroke 0s;
 		}
+    
+    svg.svg--pride * {
+  		stroke: inherit;
+    }
 	}
 
 	&[data-status=on] {
@@ -52,8 +106,12 @@
 
 		svg * {
 			stroke: var(--color-outlet-on);
-			transition: stroke $timing-fadeaway;
+			//transition: stroke $timing-fadeaway;
 		}
+    
+    svg.svg--pride * {
+  		stroke: inherit;
+    }
 	}
 
 	&[data-status=on]:active {
@@ -61,8 +119,12 @@
 
 		svg * {
 			stroke: var(--color-outlet-on-active);
-			transition: stroke 0s;
+			//transition: stroke 0s;
 		}
+    
+    svg.svg--pride * {
+  		stroke: rebeccapurple;
+    }
 	}
 	
 	&[data-outlets="bedroom_salt"] {

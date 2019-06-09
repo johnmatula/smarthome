@@ -4,13 +4,22 @@
 body {
 	@include typography(16px, 20px, 400, -.25px);
 
+  align-items: center;
 	background: var(--background-body);
+  display: flex;
+  justify-content: center;
 }
 
 * {
 	cursor: default;
 	user-select: none;
   transition: all .2s;
+}
+
+.app {
+  position: relative;
+  width: 320px;
+  height: 480px;
 }
 
 .region {
