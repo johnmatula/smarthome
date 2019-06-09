@@ -269,15 +269,13 @@ svg {
 }
 .toggles__button svg > * {
   stroke: var(--color-outlet-off);
+  transition: stroke 0.75s;
 }
 .toggles__button svg.svg--pride {
   stroke: #666;
 }
 .toggles__button svg.svg--pride--color0 {
-  stroke: #f196a9;
-}
-.toggles__button svg.svg--pride--color1 {
-  stroke: #EA3733;
+  stroke: #ff99ae;
 }
 .toggles__button svg.svg--pride--color1 {
   stroke: #EA3733;
@@ -334,6 +332,7 @@ svg {
 }
 .toggles__button[data-status=on]:active svg * {
   stroke: var(--color-outlet-on-active);
+  transition: stroke 0s;
 }
 .toggles__button[data-status=on]:active svg.svg--pride * {
   stroke: rebeccapurple;
