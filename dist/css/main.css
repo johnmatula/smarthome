@@ -115,7 +115,13 @@ body {
   font-weight: 400;
   line-height: 1.25rem;
   letter-spacing: -0.01563rem;
+  -webkit-align-items: center;
+          align-items: center;
   background: var(--background-body);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 
 * {
@@ -125,6 +131,12 @@ body {
       -ms-user-select: none;
           user-select: none;
   transition: all .2s;
+}
+
+.app {
+  position: relative;
+  width: 320px;
+  height: 480px;
 }
 
 .region {
@@ -255,9 +267,44 @@ svg {
   display: inline-block;
   margin: 0 auto;
 }
-.toggles__button svg * {
+.toggles__button svg > * {
   stroke: var(--color-outlet-off);
-  transition: stroke 0.75s;
+}
+.toggles__button svg.svg--pride {
+  stroke: #666;
+}
+.toggles__button svg.svg--pride--color0 {
+  stroke: #f196a9;
+}
+.toggles__button svg.svg--pride--color1 {
+  stroke: #EA3733;
+}
+.toggles__button svg.svg--pride--color1 {
+  stroke: #EA3733;
+}
+.toggles__button svg.svg--pride--color2 {
+  stroke: #F4893B;
+}
+.toggles__button svg.svg--pride--color3 {
+  stroke: #FBB731;
+}
+.toggles__button svg.svg--pride--color4 {
+  stroke: #A6CC4D;
+}
+.toggles__button svg.svg--pride--color5 {
+  stroke: #18A555;
+}
+.toggles__button svg.svg--pride--color6 {
+  stroke: #20BCF0;
+}
+.toggles__button svg.svg--pride--color7 {
+  stroke: #A93A93;
+}
+.toggles__button svg.svg--pride--color8 {
+  stroke: #EA3178;
+}
+.toggles__button svg.svg--pride * {
+  stroke: inherit;
 }
 .toggles__button--scene svg * {
   stroke: var(--color-body);
@@ -270,19 +317,26 @@ svg {
   stroke: var(--color-outlet-off-active);
   transition: stroke 0s;
 }
+.toggles__button:active svg.svg--pride * {
+  stroke: inherit;
+}
 .toggles__button[data-status=on] {
   background: var(--background-outlet-on);
 }
 .toggles__button[data-status=on] svg * {
   stroke: var(--color-outlet-on);
-  transition: stroke 0.75s;
+}
+.toggles__button[data-status=on] svg.svg--pride * {
+  stroke: inherit;
 }
 .toggles__button[data-status=on]:active {
   background: var(--background-outlet-on-active);
 }
 .toggles__button[data-status=on]:active svg * {
   stroke: var(--color-outlet-on-active);
-  transition: stroke 0s;
+}
+.toggles__button[data-status=on]:active svg.svg--pride * {
+  stroke: rebeccapurple;
 }
 .toggles__button[data-outlets="bedroom_salt"] {
   left: 10.3125rem;
@@ -358,30 +412,11 @@ svg {
   top: 0;
 }
 .backdrop g {
-  animation: var(--backdrop-animation);
-  -webkit-animation: var(--backdrop-animation);
   fill: var(--background-backdrop);
   stroke: var(--background-backdrop);
   transition: none;
 }
 
-/*.backdrop {
-	bottom: 0;
-	left: 0;
-	pointer-events: none;
-	position: absolute;
-	right: 0;
-	top: 0;
-  
-  g {
-    fill: #292B2A;
-    stroke: #292B2A;
-    
-    .theme--pride & {
-      animation: pride-colors 60s linear infinite;
-    }
-  }
-}*/
 @-webkit-keyframes pride-colors {
   0% {
     fill: rgba(234, 55, 51, 0.95);
