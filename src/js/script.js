@@ -1,6 +1,10 @@
 var requests = false;
 var timeout;
+var specialInterval;
+var previousButton;
 var weatherapikey = false;
+var PRIDE_COLOR_COUNT = 9;
+var BUTTON_COUNT = 16;
 var controlOutlets = function(btn, off) {
 	$.ajaxQueue({
 		'url': 'php/status.php',
@@ -133,9 +137,15 @@ function calculateWindChill(T, V){
 }
 
 function setTheme(theme) {
-  theme = theme || localStorage.getItem('smarthomeTheme') || "dark";
+  window.clearInterval(specialInterval);
   
-  console.log(theme);
+  
+  theme = theme || localStorage.getItem("smarthomeTheme") || "dark";
+  
+  $(".toggles__button svg").removeClass("svg--pride");
+  $(".toggles__button svg").removeClass(function (index, css) {
+  	return (css.match (/\bsvg--pride--color\S+/g) || []).join(' ');
+  });
   
   $(".js--selected").removeClass("js--selected");
   $("button[data-theme=" + theme + "]").parent().addClass("js--selected");
@@ -156,8 +166,7 @@ function setTheme(theme) {
         "--color-outlet-off-active": "#FFF",
         "--color-outlet-on": "#FAFFFC",
         "--color-outlet-on-active": "#DAE0DD",
-        "--color-scene": "#838785",
-        "--backdrop-animation": "none"
+        "--color-scene": "#838785"
       }
     });
   } else if(theme == "daylight") {
@@ -176,8 +185,7 @@ function setTheme(theme) {
         "--color-outlet-off-active": "#000",
         "--color-outlet-on": "#000",
         "--color-outlet-on-active": "#000",
-        "--color-scene": "#777",
-        "--backdrop-animation": "none"
+        "--color-scene": "#777"
       }
     });
   } else if(theme == "pride") {
@@ -187,22 +195,64 @@ function setTheme(theme) {
         "--background-settings": "rgba(15,15,15,.975)",
         "--background-backdrop": "#292929",
         "--background-outlet-off": "rgba(0, 0, 0, 0)",
-        "--background-outlet-off-active": "rgba(255, 255, 255, 0.5)",
-        "--background-outlet-on": "rgba(255, 255, 255, 0.2)",
-        "--background-outlet-on-active": "rgba(#fff, 0.3)",
+        "--background-outlet-off-active": "rgba(255, 255, 255, 0.4)",
+        "--background-outlet-on": "rgba(255, 255, 255, 0.1)",
+        "--background-outlet-on-active": "rgba(255, 255, 255, 0.2)",
         "--color-emphasis": "rgba(255, 255, 255, .875)",
         "--color-body": "#858585",
         "--color-outlet-off": "rgba(255, 255, 255, .875)",
         "--color-outlet-off-active": "#fff",
         "--color-outlet-on": "rgba(255, 255, 255, .975)",
         "--color-outlet-on-active": "#fff",
-        "--color-scene": "#838785",
-        "--backdrop-animation": "pride-colors 120s linear infinite"
+        "--color-scene": "#838785"
       }
     });
+    
+    setPrideColors();
+    specialInterval = window.setInterval(changePrideColors, 5000);
   }
   
   localStorage.setItem("smarthomeTheme", theme);
+}
+
+function setPrideColors() {
+  $(".toggles__button svg").each(function() {
+    $(this).addClass("svg--pride");
+  
+    var colorIndex = Math.floor(Math.random() * PRIDE_COLOR_COUNT);
+    $(this).addClass("svg--pride--color" + colorIndex);
+  });
+}
+
+function changePrideColors() {
+  var buttonAmount = 4;
+  var buttonArray = [];
+  
+  while(buttonArray.length < buttonAmount){
+    var r = Math.floor(Math.random() * BUTTON_COUNT) + 1;
+    if(buttonArray.indexOf(r) === -1) {
+      buttonArray.push(r);
+    }
+  }
+  
+  for(var i = 0; i < buttonArray.length; i++) {
+    var goodRandomFound  = false;
+    var colorIndex;
+    var $randomSvg = $(".toggles__button:nth-child(" + buttonArray[i] + ") svg");
+    
+    while(!goodRandomFound) {
+      colorIndex = Math.floor(Math.random() * PRIDE_COLOR_COUNT);
+
+      if(!($randomSvg.hasClass("svg--pride--color" + colorIndex))) {
+        $randomSvg.removeClass(function (index, css) {
+        	return (css.match (/\bsvg--pride--color\S+/g) || []).join(' ');
+        });
+        goodRandomFound = true;
+      }
+    }
+    
+    $randomSvg.addClass("svg--pride--color" + colorIndex);
+  }
 }
 
 // Document is ready, do this stuff.
@@ -248,7 +298,7 @@ $(function() {
 	updateWeatherFirstTime();
 	var intervalWeather = setInterval(updateWeather, (5 * 60 * 1000));
   
-  setTheme()
+  setTheme();
   
   cssVars({
     // Treat all browsers as legacy
@@ -257,8 +307,10 @@ $(function() {
 });
 
 
-// Enables CSS custom properties for iOS 6+.
-
-
 // Handles quick button taps by queueing them.
 (function(a){var b=a({});a.ajaxQueue=function(c){function g(b){d=a.ajax(c).done(e.resolve).fail(e.reject).then(b,b)}var d,e=a.Deferred(),f=e.promise();b.queue(g),f.abort=function(h){if(d)return d.abort(h);var i=b.queue(),j=a.inArray(g,i);j>-1&&i.splice(j,1),e.rejectWith(c.context||c,[f,h,""]);return f};return f}})(jQuery)
+
+// Random element from jQuery list
+$.fn.random = function() {
+  return this.eq(Math.floor(Math.random() * this.length));
+}
