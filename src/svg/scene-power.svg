@@ -1,8 +1,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
 				 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-			<g id="Layer_1">
 				<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="16" y1="18" x2="16" y2="2"/>
 				<path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M11.286,8C7.573,9.773,5,13.562,5,17.962
 					C5,24.057,9.926,29,16,29s11-4.943,11-11.038c0-4.399-2.573-8.188-6.286-9.962"/>
-			</g>
 			</svg>

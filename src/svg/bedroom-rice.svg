@@ -1,6 +1,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
 			 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-		<g id="Layer_1">
+
 			<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="10" y1="29" x2="22" y2="29"/>
 			<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="12" y1="8" x2="20" y2="8"/>
 			<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="13" y1="14" x2="19" y2="14"/>
@@ -8,5 +8,5 @@
 			<polygon fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" points="11,3 10,8 11,13.999 10,19.999 11,25
 				21,25 22,19.999 21,13.999 22,8 21,3 	"/>
 			<line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="16" y1="25" x2="16" y2="29"/>
-		</g>
+
 		</svg>

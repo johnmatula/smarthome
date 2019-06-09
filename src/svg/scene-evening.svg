@@ -3,19 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
 	 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<g id="Layer_1">
-	<g>
-		<defs>
-			<rect id="SVGID_3_" width="32" height="32"/>
-		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_3_"  overflow="visible"/>
-		</clipPath>
 		<path clip-path="url(#SVGID_2_)" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M16.049,16.674
 			C13.555,12.462,13.475,7.623,15.444,4c-1.456,0.227-2.896,0.697-4.248,1.458c-5.926,3.337-7.956,10.724-4.535,16.5
 			c3.419,5.778,10.996,7.757,16.919,4.422c1.352-0.761,2.492-1.741,3.42-2.859C22.799,23.37,18.54,20.884,16.049,16.674z"/>
-	</g>
-</g>
-<g id="Layer_2">
-</g>
 </svg>
