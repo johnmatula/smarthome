@@ -335,7 +335,7 @@ svg {
   transition: stroke 0s;
 }
 .toggles__button[data-status=on]:active svg.svg--pride * {
-  stroke: rebeccapurple;
+  stroke: inherit;
 }
 .toggles__button[data-outlets="bedroom_salt"] {
   left: 10.3125rem;
