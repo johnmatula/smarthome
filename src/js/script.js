@@ -77,7 +77,7 @@ var updateWeather = function() {
 			if(feels !== false) {
 				$(".weather__feels").text("Feels like " + Math.round(feels) + "°")
 			} else {
-				$(".weather__feels").text("");
+				$(".weather__feels").empty();
 			}
 
 			if(data.wind.speed >= 0.5) {
