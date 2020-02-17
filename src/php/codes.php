@@ -123,9 +123,9 @@ $scenes = array(
 		"living_windowwest"
 	),
 	"evening" => array(
-		"hall_twinkle",
 		"kitchen_cupboards",
 		"kitchen_abovecupboards",
+    "kitchen_table",
 		"living_desk",
 		"living_windoweast",
 		"living_windowwest",
